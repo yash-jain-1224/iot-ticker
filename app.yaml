@@ -8,6 +8,8 @@ description: Enterprise IoT Monitoring Platform for Auronix Motors Manufacturing
 command:
   - uvicorn
   - app.main:app
+  - --app-dir
+  - backend
   - --host
   - 0.0.0.0
   - --port
@@ -68,8 +70,3 @@ ingress:
   enabled: true
   path: /
   
-# Static files serving (frontend)
-staticFiles:
-  enabled: true
-  path: /static
-  directory: frontend/dist
